@@ -9,15 +9,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class JpaTestTableService implements TestTableService {
 
-    private TestTableRepository testTableRepository;
+  private final TestTableRepository testTableRepository;
 
-    @Autowired
-    public JpaTestTableService(TestTableRepository testTableRepository) {
-        this.testTableRepository = testTableRepository;
-    }
+  @Autowired
+  public JpaTestTableService(TestTableRepository testTableRepository) {
+    this.testTableRepository = testTableRepository;
+  }
 
-    @Override
-    public TestTable findById(long id) {
-        return testTableRepository.findById(id);
-    }
+  @Override
+  public TestTable findById(long id) {
+    return testTableRepository.findById(id);
+  }
 }
