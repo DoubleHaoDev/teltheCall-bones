@@ -1,6 +1,5 @@
 package com.teltheCall.bones.controller;
 
-
 import com.teltheCall.bones.model.TestTable;
 import com.teltheCall.bones.service.TestTableService;
 import org.springframework.beans.factory.annotation.Autowired;
