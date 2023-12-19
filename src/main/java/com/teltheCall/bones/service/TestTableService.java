@@ -4,5 +4,5 @@ import com.teltheCall.bones.model.TestTable;
 
 public interface TestTableService {
 
-  TestTable findById(long id);
+    TestTable findById(long id);
 }

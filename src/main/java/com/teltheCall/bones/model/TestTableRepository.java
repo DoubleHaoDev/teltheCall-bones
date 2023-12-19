@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TestTableRepository extends PagingAndSortingRepository<TestTable, Long> {
 
-  @Query("SELECT tt FROM TestTable tt WHERE tt.id = :testTableId")
-  TestTable findById(@Param("testTableId") long testTableId);
+    @Query("SELECT tt FROM TestTable tt WHERE tt.id = :testTableId")
+    TestTable findById( @Param("testTableId") long testTableId);
 }
