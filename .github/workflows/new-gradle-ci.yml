@@ -36,7 +36,7 @@ jobs:
       run: ./gradlew classes testClasses
 
     - name: Root Gradle Dependency Submission
-      if: $ {{ github.ref_name == 'develop' || github.ref_name == 'main'}}
+      if: ${{ github.ref_name == 'develop' || github.ref_name == 'main'}}
       uses: mikepenz/gradle-dependency-submission@v1
       with:
         correlator: 'gradle'
