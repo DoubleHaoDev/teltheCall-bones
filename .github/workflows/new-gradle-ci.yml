@@ -32,3 +32,15 @@ jobs:
       uses: gradle/gradle-build-action@v2.11.0 # v2.6.0
       with:
         arguments: build
+    - name: Compile
+      run: ./gradlew classes testClasses
+
+    - name: Root Gradle Dependency Submission
+      if: $ {{ github.ref_name == 'develop' || github.ref_name == 'main'}}
+      uses: mikepenz/gradle-dependency-submission@v1
+      with:
+        correlator: 'gradle'
+        gradle-build-module: |-
+          :
+        gradle-build-configuration: |-
+          compileClasspath
